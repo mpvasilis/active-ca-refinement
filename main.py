@@ -75,7 +75,7 @@ def update_probability_bayesian(key, feedback, constraint_probabilities):
     if feedback:
         posterior = 0.0
     else:
-        posterior = (0.75 * prior) / (0.75 * prior + 0.25 * (1 - prior))
+        posterior = (0.95 * prior) / (0.95 * prior + 0.05 * (1 - prior))
     constraint_probabilities[key] = posterior
 
 
